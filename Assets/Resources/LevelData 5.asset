@@ -17,18 +17,20 @@ MonoBehaviour:
   BrushStartCoords: {x: 0, y: 0}
   complatePattern:
   - _startPos: {x: 0, y: 0}
-    _endPos: {x: 0, y: 1}
-  - _startPos: {x: 0, y: 1}
-    _endPos: {x: 0, y: 2}
-  - _startPos: {x: 0, y: 2}
-    _endPos: {x: 1, y: 2}
-  - _startPos: {x: 1, y: 2}
-    _endPos: {x: 2, y: 2}
-  - _startPos: {x: 2, y: 2}
-    _endPos: {x: 2, y: 1}
-  - _startPos: {x: 2, y: 1}
-    _endPos: {x: 2, y: 0}
-  - _startPos: {x: 2, y: 0}
     _endPos: {x: 1, y: 0}
   - _startPos: {x: 1, y: 0}
+    _endPos: {x: 2, y: 0}
+  - _startPos: {x: 2, y: 0}
+    _endPos: {x: 2, y: 1}
+  - _startPos: {x: 2, y: 1}
+    _endPos: {x: 2, y: 2}
+  - _startPos: {x: 2, y: 2}
+    _endPos: {x: 1, y: 2}
+  - _startPos: {x: 1, y: 2}
+    _endPos: {x: 0, y: 2}
+  - _startPos: {x: 0, y: 2}
+    _endPos: {x: 1, y: 1}
+  - _startPos: {x: 1, y: 1}
+    _endPos: {x: 0, y: 1}
+  - _startPos: {x: 0, y: 1}
     _endPos: {x: 0, y: 0}

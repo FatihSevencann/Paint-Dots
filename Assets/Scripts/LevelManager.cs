@@ -16,7 +16,8 @@ namespace BrushingLine
         [SerializeField] private CameraManager solutionCamera;
         [SerializeField] private List<LevelData> _levelDatas;
         [SerializeField] private UIManager uiManager;
-        
+        [SerializeField] private Material[] Materials;
+        [SerializeField] private LineRenderer[] _lineRenderers;
         
         
         
@@ -102,8 +103,13 @@ namespace BrushingLine
                     LinePaint linePaint = Instantiate(_linePaintPrefab, new Vector3(0, 0.2f, 0), Quaternion.identity);
                     linePaint.SetRendererPosition(currentBrush.transform.position + new Vector3(0, 0.2f, 0),
                         finalPos + new Vector3(0, 0.2f, 0));
+                   int rand = Random.Range(0, 7);
+                    _lineRenderers[0].material = Materials[rand];
+                    _lineRenderers[1].material = Materials[rand];
+                   
                     linePaint.SetConnectedCoords(currentBrush.coords, newCoords);
                     _connectedLinePaints.Add(linePaint);
+                  
 
 
                 }
