@@ -27,7 +27,7 @@ namespace BrushingLine
         private GridManager _gridManager;
         private SwipeController _swipeController;
         private BrushController currentBrush;
-       [SerializeField] private LinePaint _linePaintPrefab;
+       [SerializeField] private LinePaint _linePaintPrefab,solutionPrefab;
         
         private List<Connection> inProgress = new List<Connection>();
         private List<LinePaint> _connectedLinePaints = new List<LinePaint>();
@@ -45,9 +45,6 @@ namespace BrushingLine
             GameManager.currentLevel = PlayerPrefs.GetInt("CurrentLevel", 0);
             uiManager.LevelText.text = "Level" +(GameManager.currentLevel + 1);
             
-            
-            
-            
             _swipeController = new SwipeController();
             _swipeController.SetLevelManager(this);
 
@@ -61,14 +58,10 @@ namespace BrushingLine
             _cellManagers = new CellManager[width, height];
             
             CreateGrid(Vector3.zero);
-            currentBrush = Instantiate(_brushController, _gridManager.GetCellWorldPosition(_levelDatas[GameManager.currentLevel].BrushStartCoords.x,_levelDatas[GameManager.currentLevel].BrushStartCoords.y), Quaternion.identity);
+            currentBrush = Instantiate(_brushController, _gridManager.GetCellWorldPosition(_levelDatas[GameManager.currentLevel].BrushStartCoords.x,_levelDatas[GameManager.currentLevel].BrushStartCoords.y), Quaternion.Euler(-48,9,40));
             currentBrush.coords = new Vector2Int(0, 0);
             
-            
-            
             myCamera.ZoomPerspectiveCamera(width,height);
-            
-
 
         }
 
@@ -79,17 +72,9 @@ namespace BrushingLine
             {
                 for (int j = 0; j < _gridManager.gridArray.GetLength(1); j++)
                 {
-
-
-
                     _cellManagers[i, j] = CreateCell(i, j, originPos);
-                    
-
-
                 }
-
             }
-
         }
 
         private CellManager CreateCell(int x, int y, Vector3 originPos)
@@ -98,10 +83,7 @@ namespace BrushingLine
             cell.coords = new Vector2Int(x, y);
             cell.transform.localScale = new Vector3(cellSize, 0.25f, cellSize);
             cell.transform.position=originPos+_gridManager.GetCellWorldPosition(x,y);
-            
-            
             return cell;
-
         }
 
         public void MoveBrush(Swipe directions)
@@ -142,7 +124,7 @@ namespace BrushingLine
                         }
                         PlayerPrefs.SetInt("CurrentLevel", GameManager.currentLevel);
                         uiManager.LevelComplete();
-                        Debug.Log("Level UPPPP ");
+                      
                         
                     }
                     
@@ -248,7 +230,7 @@ namespace BrushingLine
                 Vector3 endPos = _gridManager.GetCellWorldPosition(_levelDatas[GameManager.currentLevel].complatePattern[i].EndCoods.x,
                     _levelDatas[GameManager.currentLevel].complatePattern[i].EndCoods.y);
 
-                LinePaint linePaint = Instantiate(_linePaintPrefab, new Vector3(0, 0.2f, 0), Quaternion.identity);
+                LinePaint linePaint = Instantiate(solutionPrefab, new Vector3(-29.5f, 0.2f, 3.2f), Quaternion.identity);
                 linePaint.SetRendererPosition(startPos ,endPos);
                 
             }

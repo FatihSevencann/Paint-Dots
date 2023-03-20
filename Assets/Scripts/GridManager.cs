@@ -32,7 +32,7 @@ namespace BrushingLine
             _gridArray = new int[width, height];
 
         }
-        public Vector3 GetCellWorldPosition(int x, int y)
+        public Vector3 GetCellWorldPosition(float x, float y)
         {
             return new Vector3(Mathf.FloorToInt(cellSize * x), 0, Mathf.FloorToInt(cellSize * y))+_originPos;
             

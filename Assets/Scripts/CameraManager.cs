@@ -30,7 +30,7 @@ namespace BrushingLine
 
        public void ZoomOrthograpichSizeCamera(float width, float height)
        {
-           myCam.orthographicSize = (width > height ? width : height + 0.5f) / 2 + 0.25f; 
+           myCam.orthographicSize = (width > height ? width : height + 0.5f) / 2 ; 
        }
     }
 }

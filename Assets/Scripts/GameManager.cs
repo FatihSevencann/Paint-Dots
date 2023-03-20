@@ -8,8 +8,6 @@ namespace BrushingLine
     {
         public static GameStatus gameStatus = GameStatus.Playing;
         public static int currentLevel = 0;
-     
-        
     }
 
     public enum GameStatus
