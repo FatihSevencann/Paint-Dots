@@ -58,7 +58,8 @@ namespace BrushingLine
             _cellManagers = new CellManager[width, height];
             
             CreateGrid(Vector3.zero);
-            currentBrush = Instantiate(_brushController, _gridManager.GetCellWorldPosition(_levelDatas[GameManager.currentLevel].BrushStartCoords.x,_levelDatas[GameManager.currentLevel].BrushStartCoords.y), Quaternion.Euler(-48,9,40));
+            currentBrush = Instantiate(_brushController, _gridManager.GetCellWorldPosition(_levelDatas[GameManager.currentLevel].BrushStartCoords.x,_levelDatas[GameManager.currentLevel].BrushStartCoords.y), Quaternion.Euler(-7f,9,19));
+            
             currentBrush.coords = new Vector2Int(0, 0);
             
             myCamera.ZoomPerspectiveCamera(width,height);
