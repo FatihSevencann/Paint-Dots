@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8988887286864431692}
   - component: {fileID: 7402844450874337419}
   - component: {fileID: 6262543887810093255}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 1001258520034140949}
   - component: {fileID: 2390018107887366615}
   - component: {fileID: -8952692070226620646}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Blocks
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}

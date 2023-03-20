@@ -49,9 +49,8 @@ public class UIManager : MonoBehaviour
 
     public void LevelComplete()
     {
-        completeMenu.SetActive(true);
         mainMenu.SetActive(false);
-       
+        completeMenu.SetActive(true);
         
     }
     
