@@ -8,6 +8,8 @@ namespace BrushingLine
 {
     public class LevelManager : MonoBehaviour
     {
+
+        public Material[] Materials;
         public  CameraManager myCamera;
         [SerializeField] public  CellManager blockPrefab;
         [SerializeField] private float cellSize;
@@ -16,6 +18,7 @@ namespace BrushingLine
         [SerializeField] private CameraManager solutionCamera;
         [SerializeField] private List<LevelData> _levelDatas;
         [SerializeField] private UIManager uiManager;
+        [SerializeField] private LineRenderer[] _lineRenderer;
         
         
         
@@ -61,6 +64,7 @@ namespace BrushingLine
             currentBrush = Instantiate(_brushController, _gridManager.GetCellWorldPosition(_levelDatas[GameManager.currentLevel].BrushStartCoords.x,_levelDatas[GameManager.currentLevel].BrushStartCoords.y), Quaternion.Euler(-7f,9,19));
             
             currentBrush.coords = new Vector2Int(0, 0);
+          
             
             myCamera.ZoomPerspectiveCamera(width,height);
 
@@ -100,6 +104,9 @@ namespace BrushingLine
                     inProgress.Add(new Connection(currentBrush.coords, newCoords));
                     _cellManagers[currentBrush.coords.x, currentBrush.coords.y].CellCenter.gameObject.SetActive(true);
                     LinePaint linePaint = Instantiate(_linePaintPrefab, new Vector3(0, 0.2f, 0), Quaternion.identity);
+                    int rand = Random.Range(0, 7);
+                    _lineRenderer[0].material = Materials[rand];
+                    _lineRenderer[1].material = Materials[rand];
                     linePaint.SetRendererPosition(currentBrush.transform.position + new Vector3(0, 0.2f, 0),
                         finalPos + new Vector3(0, 0.2f, 0));
                     linePaint.SetConnectedCoords(currentBrush.coords, newCoords);

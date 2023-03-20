@@ -36,7 +36,7 @@ namespace BrushingLine
                 endPos = Input.mousePosition;
                 if (Vector2.Distance(endPos, startPos) > 0.1f)
                 {
-                  
+                    
                     SwipeDirection();
                     
                 }
