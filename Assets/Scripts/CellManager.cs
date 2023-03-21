@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BrushingLine
+namespace PaintDots
 {
-
-
     public class CellManager : MonoBehaviour
     {
         [SerializeField] private MeshRenderer cellCenter;

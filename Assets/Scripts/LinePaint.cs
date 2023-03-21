@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Vector2 = System.Numerics.Vector2;
 
-namespace BrushingLine
+namespace PaintDots
 {
     public class LinePaint : MonoBehaviour
     {
@@ -25,20 +25,21 @@ namespace BrushingLine
             
         }
 
+       
+
         public void SetConnectedCoords(Vector2Int startCoord ,Vector2Int endCoord)
         {
             _startCoords = startCoord;
             _endCoords = endCoord;
-            
-
         }
 
-        public void SetRendererPosition(Vector3 startPos, Vector3  endPos)
+        public void SetRendererPosition(Vector3 startPos, Vector3  endPos,Material material)
         {
             _lineRenderer.positionCount = 2;
             _lineRenderer.SetPosition(0,startPos);
             _lineRenderer.SetPosition(1,endPos);
-            
+            _lineRenderer.material = material;
+
         }
         
         

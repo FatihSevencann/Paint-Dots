@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
-namespace BrushingLine
+namespace PaintDots
 {
     public class GridManager
     {
@@ -26,9 +26,6 @@ namespace BrushingLine
             Height = height;
             cellSize = _cellSize;
             _originPos = originPos;
-            
-            
-            
             _gridArray = new int[width, height];
 
         }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BrushingLine
+namespace PaintDots
 {
 
     [CreateAssetMenu(fileName = "LevelData",menuName = "ScriptableObjects/Create LevelData",order = 1)]
@@ -11,8 +11,10 @@ namespace BrushingLine
         public int width, height;
         public Vector2Int BrushStartCoords;
         public List<Connection> complatePattern = new List<Connection>();
-        
-        
+    
+
+
+
 
 
 

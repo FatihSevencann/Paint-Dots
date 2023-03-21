@@ -49,6 +49,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coords: {x: 0, y: 0}
+  _meshRenderer_:
+  - {fileID: 9099575468366797787}
+  - {fileID: 129619553547526549}
+  - {fileID: 772825529148067005}
+  - {fileID: 121573121746224549}
+  Colors:
+  - {fileID: 2100000, guid: 7471979ee61204e26bc386ef6fa5007a, type: 2}
+  - {fileID: 2100000, guid: c6df4ca3a1057470596bd3102aad087d, type: 2}
+  - {fileID: 2100000, guid: 3ae09ee86e346448e9d9ecd70019788f, type: 2}
+  - {fileID: 2100000, guid: fc5c78c1f550d401d9e7fab174ceb263, type: 2}
+  - {fileID: 2100000, guid: 385c5ba52e9584f4b86f29c519b9745c, type: 2}
 --- !u!1 &3387445304771355396
 GameObject:
   m_ObjectHideFlags: 0
