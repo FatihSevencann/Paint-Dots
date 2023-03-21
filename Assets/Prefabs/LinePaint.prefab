@@ -137,11 +137,11 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 51
-    numCapVertices: 72
+    numCornerVertices: 27
+    numCapVertices: 15
     alignment: 0
     textureMode: 0
-    shadowBias: 0.71
+    shadowBias: 0
     generateLightingData: 0
   m_UseWorldSpace: 0
   m_Loop: 0

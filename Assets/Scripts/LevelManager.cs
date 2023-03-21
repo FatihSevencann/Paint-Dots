@@ -32,7 +32,7 @@ namespace PaintDots
        [SerializeField] private LinePaint _linePaintPrefab,solutionPrefab;
        private List<Connection> inProgress = new List<Connection>();
         private List<LinePaint> _connectedLinePaints = new List<LinePaint>();
-        private int IndexColor;
+        private int IndexColor=0;
         public  void ChangeColor(int colorIndex)
         {
             IndexColor = colorIndex;
@@ -80,7 +80,6 @@ namespace PaintDots
             width = _levelDatas[GameManager.currentLevel].width;
             height= _levelDatas[GameManager.currentLevel].height;
             
-            
             _gridManager = new GridManager();
             ComplateBoard();
             _gridManager.Initialize(width,height,cellSize,Vector3.zero);
@@ -91,6 +90,7 @@ namespace PaintDots
             currentBrush.coords = new Vector2Int(0, 0);
             
             myCamera.ZoomPerspectiveCamera(width,height);
+            ChangeColor(IndexColor);
         }
 
         private void CreateGrid( Vector3 originPos)
